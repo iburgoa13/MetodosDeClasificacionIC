@@ -1,34 +1,31 @@
 package Logic;
 
+import java.util.ArrayList;
+
 public class Elementos {
-    private double[] _list;
-    private String _name;
+    private ArrayList<Double> lista;
+    public String nombre;
 
-    public Elementos(double[] l, String n){
-        _list = l;
-        _name = n;
+
+    public Elementos(ArrayList<Double> lista, String nombre) {
+        super();
+        this.lista=lista;
+        this.nombre = nombre;
     }
 
-    public void set_name(String _name) {
-        this._name = _name;
+    public ArrayList<Double> getLista() {
+        return lista;
     }
 
-    public String get_name() {
-        return _name;
+    public void setLista(ArrayList<Double> lista) {
+        this.lista = lista;
     }
 
-    public double[] get_list() {
-        return _list;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void set_list(double[] _list) {
-        this._list = _list;
-    }
-    public String getListString(){
-        String x="";
-        for(double n : _list){
-            x+=n+" ";
-        }
-        return x;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 }
